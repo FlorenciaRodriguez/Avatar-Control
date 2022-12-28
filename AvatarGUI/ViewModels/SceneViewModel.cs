@@ -76,6 +76,7 @@ namespace AvatarGUI.ViewModels
             {
                 Prefabs.Add(prefabInfo.modelName);
                 PrefabPositions.Add(prefabInfo.position);
+                PrefabRotations.Add(prefabInfo.rotation);
             }
         }
 
@@ -206,12 +207,15 @@ namespace AvatarGUI.ViewModels
 
         public List<float> PrefabPositions { get; set; } = new List<float>();
 
+        public List<int> PrefabRotations { get; set; } = new List<int>();
+
         private void SetScenePrefabInfo()
         {
             for (int i = 0; i < scene.prefabs.Count; i++)
             {
                 scene.prefabs[i].position = PrefabPositions[i];
-                scene.prefabs[i].modelName = Prefabs[i];
+                scene.prefabs[i].rotation = PrefabRotations[i];
+                scene.prefabs[i].modelName = Prefabs[i];                
             }
         }
 
@@ -220,13 +224,14 @@ namespace AvatarGUI.ViewModels
             for (int i = 0; i < scene.prefabs.Count; i++)
             {
                 PrefabPositions[i] = scene.prefabs[i].position;
+                PrefabRotations[i] = scene.prefabs[i].rotation;
                 Prefabs[i] = scene.prefabs[i].modelName;
             }
         }
 
         public void AddPrefab()
         {
-            scene.prefabs.Add(new PrefabInfo(Constants.PREFAB_VACIO,0));
+            scene.prefabs.Add(new PrefabInfo(Constants.PREFAB_VACIO, 0, 0));
         }
 
         private void EditScene(object obj)

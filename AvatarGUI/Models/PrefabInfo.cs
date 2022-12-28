@@ -10,16 +10,18 @@ namespace AvatarGUI.Models
     {
         public string modelName;
         public float position;
+        public int rotation;
 
-        public PrefabInfo(string model, float position)
+        public PrefabInfo(string model, float position, int rotation)
         {
             modelName = model;
             this.position = position;
+            this.rotation = rotation;
         }
 
         public object Clone()
         {
-            return new PrefabInfo(modelName, position);
+            return new PrefabInfo(modelName, position, rotation);
         }
     }
 }

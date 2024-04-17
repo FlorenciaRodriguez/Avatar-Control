@@ -135,6 +135,19 @@ namespace AvatarGUI.ViewModels
             }
         }
 
+        private ICommand _clearCommand;
+        public ICommand ClearCommand
+        {
+            get
+            {
+                return _clearCommand;
+            }
+            set
+            {
+                _clearCommand = value;
+            }
+        }
+
         public SceneListViewModel(MainWindow mainWindow)
         {
             tCPAgent = new TCPAgent();
@@ -146,6 +159,7 @@ namespace AvatarGUI.ViewModels
             PlayCommand = new RelayCommand(new Action<object>(PlayRoutine));
             PauseCommand = new RelayCommand(new Action<object>(PauseRoutine));
             StopCommand = new RelayCommand(new Action<object>(StopRoutine));
+            ClearCommand = new RelayCommand(new Action<object>(Clear));
             Modes.Add(Constants.TEXTMODE, "Texto");
             Modes.Add(Constants.AUDIOMODE, "Audio");
             Modes.Add(Constants.TEXTAUDIOMODE, "Texto + Audio");
@@ -319,6 +333,11 @@ namespace AvatarGUI.ViewModels
         public void RefreshScenes()
         {
             mainWindow.RefreshScenes();
+        }
+
+        public void Clear(object obj)
+        {
+            SceneList.Clear();
         }
     }
 }

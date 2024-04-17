@@ -27,6 +27,12 @@ namespace AvatarGUI.ViewModels
             AvailableEmotions.Add(2, "Enojado");
             AvailableEmotions.Add(3, "Triste");
             AvailableEmotions.Add(4, "Llorando");
+            AvailableEmotions.Add(5, "Corriendo");
+            AvailableEmotions.Add(6, "Gritando");
+            AvailableEmotions.Add(7, "Engreido");
+            AvailableEmotions.Add(8, "Lo Que Sea");
+            AvailableEmotions.Add(9, "Caminata");
+            AvailableEmotions.Add(10, "Brazo");
             foreach (Step step in scene.steps)
             {
                 StepViewModel stepvm = new StepViewModel(this);
@@ -145,6 +151,6 @@ namespace AvatarGUI.ViewModels
             scene.steps.Remove(viewModel.step);
             StepList.Remove(viewModel);
             window.DataGrid_RowChanged();
-        }
+        }        
     }
 }

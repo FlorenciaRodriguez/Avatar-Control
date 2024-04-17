@@ -54,5 +54,6 @@ namespace AvatarGUI
                 " En caso de que la rutina este pausada, el boton de reproducir la reanudara." + Environment.NewLine +
                 "En caso de que se presente alguna inconsistencia en la rutina, o los campos de direccion de carpeta o IP sean erroneos se notificara de dicho error.");
         }
+
     }
 }

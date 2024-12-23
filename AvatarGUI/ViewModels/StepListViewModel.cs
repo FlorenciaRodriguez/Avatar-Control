@@ -33,6 +33,25 @@ namespace AvatarGUI.ViewModels
             AvailableEmotions.Add(8, "Lo Que Sea");
             AvailableEmotions.Add(9, "Caminata");
             AvailableEmotions.Add(10, "Brazo");
+            AvailableEmotions.Add(11, "Miedo");
+            AvailableEmotions.Add(12, "Pensativo mentón");
+            AvailableEmotions.Add(13, "Asiente");
+            AvailableEmotions.Add(14, "Señala con cabeza");
+            AvailableEmotions.Add(15, "Oscila");
+            AvailableEmotions.Add(16, "Gesto con mano");
+            AvailableEmotions.Add(17, "Victoria");
+            AvailableEmotions.Add(18, "Desacuerdo");
+            AvailableEmotions.Add(19, "Pensativo");
+            AvailableEmotions.Add(20, "Avergonzado");
+            AvailableEmotions.Add(21, "Avergonzado hombro");
+            AvailableEmotions.Add(22, "Indiferente");
+            AvailableEmotions.Add(23, "Habla");
+            AvailableEmotions.Add(24, "Asustado");
+            AvailableEmotions.Add(25, "Berrinche");
+            AvailableEmotions.Add(26, "Rezonga");
+            AvailableEmotions.Add(27, "Salta");
+            AvailableEmotions.Add(28, "Saluda");
+            AvailableEmotions.Add(29, "Festeja en silencio");
             foreach (Step step in scene.steps)
             {
                 StepViewModel stepvm = new StepViewModel(this);
